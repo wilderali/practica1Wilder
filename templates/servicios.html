@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+{% block title %}Servicios{% endblock %}
+{% block content %}
+<h2>Nuestros Servicios</h2>
+
+<section id="servicios">
+    <div class="servicio_id">
+        <img src="{{ url_for('static', filename='productos.jpg') }}" alt="Desarrolo" width="700">
+        <h3>Productos</h3>
+        <p>realizamos diferentes productos con diferentes precios.</p>
+        <a href="{{ url_for('detalle_servicio', servicio_slug='desarrollo') }}" class="btn">Leer más</a>
+    </div>
+
+    <div class="servicio_id">
+        <img src="{{ url_for('static', filename='software.png') }}" alt="Desarrollo de Software" width="700">
+        <h3>Desarrollo de Software</h3>
+        <p>Realizamos nuestro propios software para todos nuestros productos con gente capacitada.</p>
+        <a href="{{ url_for('detalle_servicio', servicio_slug='desarrollo') }}" class="btn">Leer más</a>
+    </div>
+
+    <div class="servicio_id">
+        <img src="{{ url_for('static', filename='marketing.webp') }}" alt="Marketing Digital" width="700">
+        <h3>Marketing Digital</h3>
+        <p>estrategias de marketing y publicidad para todos nuestros clientes.</p>
+        <a href="{{ url_for('detalle_servicio', servicio_slug='marketing') }}" class="btn">Leer más</a>
+    </div>
+</section>
+<button onclick="window.history.back();">Volver Atrás</button>
+{% endblock %}
+
+</body>
+</html>

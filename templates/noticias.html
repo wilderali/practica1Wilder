@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+
+{% block title %}Noticias{% endblock %}
+
+{% block content %}
+<h2>Últimas Noticias</h2>
+
+<section id="noticias">
+    <div class="noticia">
+        <img src="{{ url_for('static', filename='laptop.png') }}" alt="Noticia 1" width="300">
+        <h3>Lanzamiento de Nuevo Producto</h3>
+        <p>Estamos emocionados de anunciar el lanzamiento de nuestro nuevo producto Khunpa Core i5 window 11.</p>
+    </div>
+
+    <div class="noticia">
+        <img src="{{ url_for('static', filename='internacional.jpg') }}" alt="Noticia 2" width="300">
+        <h3>Expansión Internacional</h3>
+        <p>Estamos trabajando para tener otras tiendas en diferentes ciudades de América Latina.</p>
+    </div>
+
+    <div class="noticia">
+        <img src="{{ url_for('static', filename='participe.jpeg') }}" alt="Noticia 3" width="300">
+        <h3>Participación en Evento Tecnológico</h3>
+        <p>Recientemente participamos en el Congreso Internacional de Innovación Tecnológica.</p>
+    </div>
+</section>
+<button onclick="window.history.back();">Volver Atrás</button>
+{% endblock %}
+
+</body>
+</html>
+
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<section id="hero">
+    <img src="{{ url_for('static', filename='logotipo.png') }}" alt="Logotipo de Mi Empresa" width="400">
+    <h2>QUIPUS BOLIVIA - productos realizados en Bolivia</h2>
+    <p>Ofrecemos productos hechos en Bolivia, primera empresa Boliviana con precios economicos.</p>
+</section>
+
+<hr>
+
+<nav>
+    <ul>
+        <li><a href="{{ url_for('index') }}"><b>Inicio</b></a></li>
+        <li><a href="{{ url_for('quienes_somos') }}"><b>Quiénes Somos</b></a></li>
+        <li><a href="{{ url_for('servicios') }}"><b>Servicios</b></a></li>
+        <li><a href="{{ url_for('noticias') }}"><b>Noticias</b></a></li>
+        <li><a href="{{ url_for('contacto') }}"><b>Contacto</b></a></li>
+    </ul>
+</nav>
+
+<hr>
+
+<section id="testimonios">
+    <h3>Testimonios de Nuestros Clientes</h3>
+    <blockquote>
+        "Gracias a la empresa QUIPUS podemos adquirir productos echos en Bolivia" <br>
+        – Cliente Satisfecho
+    </blockquote>
+    <blockquote>
+        "El servicio es excelente, siempre atentos a nuestras necesidades." <br>
+        – Usuario Feliz
+    </blockquote>
+</section>
+
+<hr>
+
+<section id="ventajas">
+    <h3>¿Por qué elegirnos?</h3>
+    <ul>
+        <li>Abierto 24/7</li>
+        <li>Consultoría personal</li>
+        <li>Más de 11 años de experiencia en el mercado</li>
+    </ul>
+    <button onclick="location.href='{{ url_for() }}'">Ver Servicios</button>
+    <button onclick="location.href='{{ url_for() }}'">Contáctanos</button>
+</section>
+
+<hr>
+
+<section id="redes-sociales">
+    <h3>Síguenos en Nuestras Redes Sociales</h3>
+    <button onclick="window.open('https://facebook.com', '_blank')">Facebook</button>
+    <button onclick="window.open('https://instagram.com', '_blank')">Instagram</button>
+    <button onclick="window.open('https://twitter.com', '_blank')">Twitter</button>
+</section>
+{% endblock %}
+
+</body>
+</html>

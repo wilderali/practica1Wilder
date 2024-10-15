@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+
+{% block title %}Quiénes Somos{% endblock %}
+
+{% block content %}
+<h2>Quiénes Somos</h2>
+
+<section id="historia">
+    <h3>Nuestra Historia</h3>
+    <p> La empresa Quipus de Bolivia fue fundada mediante un decreto el 9 de octubre de 2013. Por lo tanto, en 2024, cumple 11 años de existencia.
+        Esta empresa pública se dedica a la producción, ensamblado y comercialización de productos tecnológicos en el país..</p>
+</section>
+
+<hr>
+
+<section id="mision-vision">
+    <h3>Misión</h3>
+    <p>La empresa Quipus es "desarrollar, producir y comercializar componentes, productos y soluciones tecnológicas de 
+        calidad para promover el acceso y uso de las tecnologías de la información y comunicación".</p>
+
+    <h3>Visión</h3>
+    <p>Quipus aspira a convertirse en un referente nacional en el desarrollo de tecnología y soluciones de información, destacándose 
+        por la calidad y eficiencia en la prestación de sus servicios..</p>
+</section>
+
+<hr>
+
+<section id="equipo">
+    <h3>Conoce a Nuestro Equipo</h3>
+
+    <div class="miembro">
+        <img src="{{ url_for('static', filename='wilder.jpeg') }}" alt="Foto de Juan Pérez" width="150">
+        <p><strong>Wilder Ali Mayta</strong> </p>
+        <p>Experto en dirección estratégica con más de 15 años de experiencia en el sector tecnológico.</p>
+    </div>
+
+    <div class="miembro">
+        <img src="{{ url_for('static', filename='ana.jpg') }}" alt="Foto de Ana Gómez" width="150">
+        <p><strong>Ana Gómez</strong></p>
+        <p>Especialista en tecnología y desarrollo de software, liderando los proyectos más innovadores.</p>
+    </div>
+
+    <div class="miembro">
+        <img src="{{ url_for('static', filename='luis.jpg') }}" alt="Foto de Luis Rodríguez" width="150">
+        <p><strong>Luis Rodríguez</strong> - Gerente de Marketing</p>
+        <p>Encargado de la comunicación y posicionamiento de la empresa en el mercado.</p>
+    </div>
+</section>
+<button onclick="window.history.back();">Volver Atrás</button>
+{% endblock %}
+
+</body>
+</html>
